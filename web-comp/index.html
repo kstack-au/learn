@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="modal.js"></script>
+    <script src="updated-modal.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        h2 {
+            /* color: red; */
+        }
+    </style>
+</head>
+<body>
+    <button>Click to open modal</button>
+    <uc-modal>
+        <h2 class="red" slot="title">This is a h2 title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi fuga unde, doloribus pariatur culpa qui blanditiis optio quasi eaque aperiam quos incidunt hic molestias voluptatum! Id quod ratione delectus? Aperiam!</p>
+    </uc-modal>
+
+    <uc-modal-updated>
+        <h4>Test this modal</h4>
+    </uc-modal-updated>
+</body>
+
+<script>
+    const button = document.querySelector('button');
+    const modal = document.querySelector('uc-modal');
+    modal.addEventListener('confirm', () => console.log('confirmed'))
+    modal.addEventListener('cancel', () => console.log('cancelled'))
+    button.addEventListener('click', () => modal.open())
+
+</script>
+</html>

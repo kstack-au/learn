@@ -1,0 +1,64 @@
+:host, :host *{
+    font-family: inherit;
+}
+aside {
+    opacity: 0;
+    pointer-events: none;
+    width: 80%;
+    max-width: 300px;
+    background: white;
+    border: 1px solid #333;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    padding: 1em;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+}
+
+:host([opened]) aside,
+:host([opened]) #backdrop {
+    opacity: 1;
+    pointer-events: all;
+}
+
+:host([opened]) aside {
+    left: 0;
+}
+
+#close {
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+    font-size: 1.2rem;
+}
+
+#backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in;
+}
+
+.btn {
+    border: none;
+    padding: 1em;
+    background: white;
+    color: #333;
+}
+.btn.active,
+.btn:hover {
+    background: black;
+    color: white;
+}
+
+.btn:active {
+    outline: none;
+}

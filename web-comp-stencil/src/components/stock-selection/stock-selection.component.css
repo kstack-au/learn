@@ -1,0 +1,30 @@
+:host, :host *{
+    font-family: inherit;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background: #f2f2f2;
+    width: auto;
+    display: inline-block;
+}
+
+ul li {
+    padding: 0.3em 1em 0.3em 0.5em;
+    cursor: pointer;
+}
+
+ul li:hover {
+    color: white;
+    background: #333;
+}
+
+input   {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    background: white;
+    display: block;
+    /* margin-bottom: 10px; */
+}

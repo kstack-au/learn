@@ -1,0 +1,25 @@
+.tip {
+    position: relative;
+}
+.tip .question{
+    color: white;
+    border-radius: 50%;
+    background: black;
+    position: relative;
+    padding: 0.4em 0.7em;
+}
+
+.helpertext {
+    position: absolute;
+    background: black;
+    color: white;
+    border-radius: 2px;
+    top: 2em;
+    width: 5em;
+    left: -2em;
+    padding: 0.5em;
+}
+
+:host {
+    display: inline-block;
+}

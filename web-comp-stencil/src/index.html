@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/web-comp-stencil.esm.js"></script>
+    <script nomodule src="/build/web-comp-stencil.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+      }
+      section {
+        margin-top: 20px;
+      }
+      
+      stock-price.error {
+        border: 1px solid orange;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Menu</button>
+    <side-bar title="Hello stencil">
+      <nav>
+        <ul>
+          <li><a href="/">Test content</a></li>
+          <li><a href="/">Test content</a></li>
+          <li><a href="/">Test content</a></li>
+        </ul>
+      </nav>
+    </side-bar>
+    
+    <section>
+      Let me test this tooltip
+      <tool-tip text="Helper text">
+      </tool-tip>
+    </section>
+
+    <section>
+      <stock-price stock-name="AAPL"></stock-price>
+      <stock-search stock-name></stock-search>
+    </section>
+
+  </body>
+  <script>
+    const sideBar = document.querySelector('side-bar');
+    const menuBtn = document.querySelector('button');
+    const stockSearch = document.querySelector('stock-search');
+    const stockPrice = document.querySelector('stock-price');
+    menuBtn.addEventListener('click', () => {
+      if (!sideBar.opened) {
+        sideBar.open();
+      }
+    })
+    // stockSearch.addEventListener('stockselect', (event) => {
+    //   //console.log('stockselect', event.detail);
+    //   stockPrice.setAttribute('stock-name', event.detail);
+    // })
+
+  </script>
+</html>

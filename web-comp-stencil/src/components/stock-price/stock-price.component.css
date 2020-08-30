@@ -1,0 +1,28 @@
+:host, :host *{
+    font-family: inherit;
+}
+
+:host {
+    display: block;
+    padding: 2em;
+    border: 1px solid #ccc;
+}
+
+form {
+    
+}
+
+input   {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    background: white;
+    display: block;
+    /* margin-bottom: 10px; */
+}
+
+button {
+    background: lightsteelblue;
+    padding: 0.5em 1em;
+    border: none;
+}
+
